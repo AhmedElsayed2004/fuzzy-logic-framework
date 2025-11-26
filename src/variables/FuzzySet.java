@@ -15,6 +15,10 @@ public class FuzzySet {
         return membershipFunction.evaluate(x);
     }
 
+    public double centroid() {
+        return membershipFunction.centroid();
+    }
+
     public String getName() {
         return name;
     }

@@ -31,7 +31,7 @@ public class LinguisticVariable {
     }
 
     public Map<String, Double> fuzzify(double x) {
-        if(!domain.contains(x))
+        if (!domain.contains(x))
             throw new IllegalArgumentException(
                     x + " is outside the domain [" + domain.getMin() + ", " + domain.getMax() + "]"
             );
@@ -40,6 +40,10 @@ public class LinguisticVariable {
                         FuzzySet::getName,
                         fs -> fs.evaluate(x)
                 ));
+    }
+
+    public FuzzySet getFuzzySet(String name) {
+        return fuzzySets.get(name);
     }
 
 
