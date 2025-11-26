@@ -1,5 +1,8 @@
 package operators;
 
-public interface AndOperator {
-    public double calculate(double a, double b);
+public class AndOperator implements LogicalOperator {
+    @Override
+    public double calculate(double a, double b) {
+        return Math.min(a, b);
+    }
 }
