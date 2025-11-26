@@ -19,6 +19,10 @@ public class FuzzySet {
         return membershipFunction.centroid();
     }
 
+    public double meanOfMaximum() {
+        return membershipFunction.meanOfMaximum();
+    }
+
     public String getName() {
         return name;
     }
