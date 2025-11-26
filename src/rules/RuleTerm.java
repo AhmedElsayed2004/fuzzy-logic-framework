@@ -18,4 +18,8 @@ public class RuleTerm {
     public String getSetName() {
         return setName;
     }
+
+    public LinguisticVariable getVariable() {
+        return variable;
+    }
 }

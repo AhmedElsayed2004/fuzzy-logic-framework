@@ -1,3 +1,5 @@
+package fuzzy;
+
 import variables.LinguisticVariable;
 
 import java.util.List;
