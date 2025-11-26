@@ -15,4 +15,16 @@ public class TrapezoidalMF implements MembershipFunction {
             return 1;
         return (x - rightFoot) / (rightShoulder - rightFoot);
     }
+
+    @Override
+    public double centroid() {
+        return (leftFoot + rightFoot + leftShoulder + rightShoulder) / 4;
+    }
+
+    @Override
+    public double meanOfMaximum() {
+        return (leftShoulder + rightShoulder) / 2;
+    }
+
+
 }

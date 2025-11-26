@@ -18,4 +18,14 @@ public class TriangularMF implements MembershipFunction {
             return (x - left) / (peak - left);
         return (x - right) / (peak - right);
     }
+
+    @Override
+    public double centroid() {
+        return (left + right + peak) / 3;
+    }
+
+    @Override
+    public double meanOfMaximum() {
+        return peak;
+    }
 }
