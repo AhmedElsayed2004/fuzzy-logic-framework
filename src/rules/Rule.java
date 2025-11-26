@@ -38,4 +38,20 @@ public class Rule {
     public void disable() {
         enabled = false;
     }
+
+    public RuleTerm getAntecedent1() {
+        return antecedent1;
+    }
+
+    public RuleTerm getAntecedent2() {
+        return antecedent2;
+    }
+
+    public LogicalOperator getLogicalOperator() {
+        return logicalOperator;
+    }
+
+    public RuleTerm getConsequent() {
+        return consequent;
+    }
 }
