@@ -19,4 +19,22 @@ public class DefuzzificationResult {
     public double getValue(LinguisticVariable var) {
         return crispValues.get(var);
     }
+
+    public boolean contains(LinguisticVariable var) {
+        return crispValues.containsKey(var);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("DefuzzificationResult:\n");
+        for (Map.Entry<LinguisticVariable, Double> entry : crispValues.entrySet()) {
+            sb.append("  ")
+                    .append(entry.getKey().getName())
+                    .append(" = ")
+                    .append(entry.getValue())
+                    .append("\n");
+        }
+        return sb.toString();
+    }
 }

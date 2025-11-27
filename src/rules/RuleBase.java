@@ -6,7 +6,7 @@ import java.util.List;
 public class RuleBase {
     List<Rule> rules;
 
-    RuleBase() {
+    public RuleBase() {
         rules = new ArrayList<Rule>();
     }
 

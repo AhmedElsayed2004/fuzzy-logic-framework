@@ -8,15 +8,21 @@ public class LinguisticVariable {
     private String name;
     private Map<String, FuzzySet> fuzzySets;
     private Domain domain;
+    private double defaultValue;
 
-    public LinguisticVariable(String name, Map<String, FuzzySet> fuzzySets, Domain domain) {
+    public LinguisticVariable(String name, Map<String, FuzzySet> fuzzySets, Domain domain, double defaultValue) {
         this.name = name;
         this.fuzzySets = fuzzySets;
         this.domain = domain;
+        this.defaultValue = defaultValue;
+    }
+
+    public LinguisticVariable(String name, Domain domain, double defaultValue) {
+        this(name, new HashMap<>(), domain, defaultValue);
     }
 
     public LinguisticVariable(String name, Domain domain) {
-        this(name, new HashMap<>(), domain);
+        this(name, new HashMap<>(), domain, (domain.getMin() + domain.getMax()) / 2);
     }
 
     // Must ensure that all fuzzy sets is distinct (fuzzy set determines by its name)
@@ -46,5 +52,11 @@ public class LinguisticVariable {
         return fuzzySets.get(name);
     }
 
+    public double getDefaultValue() {
+        return defaultValue;
+    }
 
+    public String getName() {
+        return name;
+    }
 }
