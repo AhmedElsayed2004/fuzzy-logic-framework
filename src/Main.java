@@ -49,8 +49,8 @@ public class Main {
 
 // Example input
         Map<String, Double> inputs = new HashMap<>();
-        inputs.put("AltitudeError", -1.0);  // Drone below target
-        inputs.put("RateChange", -0.5);     // Descending moderately
+        inputs.put("AltitudeError", -1.0);
+        inputs.put("RateChange", -0.5);
 
         var result = fuzzySystem.run(inputs);
         System.out.println(result);
