@@ -18,7 +18,7 @@ public class CentroidDefuzzifier implements Defuzzifier {
                 sum += fuzzySet.getValue();
                 weightedSum += fuzzySet.getValue() * entry.getKey().getFuzzySet(fuzzySet.getKey()).centroid();
             }
-            defuzzificationResult.add(linguisticVariable, sum / weightedSum);
+            defuzzificationResult.add(linguisticVariable, weightedSum / sum);
         }
         return defuzzificationResult;
     }

@@ -9,6 +9,7 @@ public class InferenceResult {
     private Map<LinguisticVariable, Map<String, Double>> values;
 
     public InferenceResult() {
+        values = new HashMap<>();
     }
 
     public InferenceResult(Map<LinguisticVariable, Map<String, Double>> values) {

@@ -3,8 +3,8 @@ package rules;
 public class RuleBaseEditor {
     RuleBase ruleBase;
 
-    public RuleBaseEditor() {
-        ruleBase = new RuleBase();
+    public RuleBaseEditor(RuleBase ruleBase) {
+        this.ruleBase = ruleBase;
     }
 
     public void create(Rule rule) {
